@@ -93,7 +93,7 @@ function mineForward(num)
   resp["r"] = false
   while num > 0 do
     diamondDir = anyDiamonds()
-    if diamondDir != resp then
+    if diamondDir ~= resp then
       slurpThatVein(diamondDir)
     turtle.dig()
     moveForward(1)
