@@ -1,3 +1,5 @@
 local resp = http.get("https://raw.githubusercontent.com/Anonymous-crow/ccbot/master/main.lua")
-write(resp.readAll())
+local h = fs.open("main.lua", "w")
+h.write(resp.readAll())
 resp.close()
+h.close()
