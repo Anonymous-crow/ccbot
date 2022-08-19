@@ -8,26 +8,26 @@ function anyDiamonds()
   local has_block, data = turtle.inspectUp()
   if has_block then
     if data.name == "minecraft:diamond_ore" or data.name == "minecraft:deepslate_diamond_ore" then
-      resp += 1
+      resp = resp + 1
     end
   end
   local has_block, data = turtle.inspect()
   if has_block then
     if data.name == "minecraft:diamond_ore" or data.name == "minecraft:deepslate_diamond_ore" then
-      resp += 1
+      resp = resp + 1
     end
   end
   local has_block, data = turtle.inspectDown()
   if has_block then
     if data.name == "minecraft:diamond_ore" or data.name == "minecraft:deepslate_diamond_ore" then
-      resp += 1
+      resp = resp + 1
     end
   end
   turtle.turnLeft()
   local has_block, data = turtle.inspect()
   if has_block then
     if data.name == "minecraft:diamond_ore" or data.name == "minecraft:deepslate_diamond_ore" then
-      resp += 1
+      resp = resp + 1
     end
   end
   turtle.turnLeft()
@@ -35,7 +35,7 @@ function anyDiamonds()
   local has_block, data = turtle.inspect()
   if has_block then
     if data.name == "minecraft:diamond_ore" or data.name == "minecraft:deepslate_diamond_ore" then
-      resp += 1
+      resp = resp + 1
     end
   end
   return resp
